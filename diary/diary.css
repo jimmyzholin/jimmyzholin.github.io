@@ -1,0 +1,10 @@
+#text{
+	position: relative;
+	width: 60%;
+	}
+	
+#contact{
+	position: fixed;
+	left: 88%;
+	top: 90%;
+}

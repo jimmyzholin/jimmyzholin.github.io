@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang= "en">
+<head>
+	<!--Bootstrap framework-->
+	<meta charset= "utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name= "viewport" content= "width=device-width, initial-scale= 1">
+	
+	 <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+	
+	<title> JL Photos</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<link href="navbar-static-top.css" rel="stylesheet">
+	
+	<link type="text/css" rel="stylesheet" href="../home.css"/>
+	
+</head>
+
+<body>
+
+<!--static navbar-->
+<nav class= "navbar navbar-default navbar-static-top">
+	<div class= "container-fluid">
+	<!--logo-->
+		<div class= "navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="C:/Users/jimmy/Desktop/My Website/index.html">JL</a>
+		</div>
+	
+	<!--menu items-->
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class= "nav navbar-nav">
+				<li><a href= "C:/Users/jimmy/Desktop/My Website/index.html">Home</a></li>
+				<li><a href= "C:/Users/jimmy/Desktop/My Website/diary/index.html">"Dear Diary"</a></li>
+				<li class= "dropdown">
+					<a href= "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interests <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="C:/Users/jimmy/Desktop/My Website/snooker/index.html">Snooker</a></li>
+						<li><a href="#">Test</a></li>
+					</ul>
+				</li>
+				<li><a href= "C:/Users/jimmy/Desktop/My Website/stories/index.html">Stories</a></li>
+				<li class= "active"><a href= "C:/Users/jimmy/Desktop/My Website/photos/index.html">Photos</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div id="text" class= "container-fluid">
+<h2>Two words are selected at random and I try to take photographs that show the two words together.</h2>
+<h3>Sphere and Bleakness</h3>
+
+<script language= "JavaScript">
+	var randNum = Math.random();
+	var num = 5;
+	var randCreate = Math.round(randNum * (num - 1)) + 1;
+	images = new Array();
+	images[1] = "mcd";
+	images[2] = "cj's";
+	images[3] = "sweetHeartBack";
+	images[4] = "sweetHeartFront";
+	images[5] = "deanza";
+	
+	var image = 'C:/Users/jimmy/Desktop/My Website/Pictures/' + images[randCreate];
+	
+	image += '.jpg';
+
+</script>
+
+<script language= "JavaScript">
+
+	var now = new Date();
+	var hrs = now.getHours();
+	
+	function printTime(){
+		var now = new Date();
+		var hrs = now.getHours();
+		var min = now.getMinutes();
+		var sec = now.getSeconds();
+		
+		//time-digit formatting
+		if (hrs < 10)hrs = "0" + hrs;
+		if (min < 10)min = "0" + min;
+		if (sec < 10)sec = "0" + sec;
+		
+		var time = hrs + ":" + min + ":" + sec;
+		
+		document.getElementById('wow').innerHTML = "The current time is " + time;
+	}
+	
+	var counter = 0;
+	dnAlbum = new Array();
+	dnAlbum[0] = "one_opt";
+	dnAlbum[1] = "two_opt";
+	dnAlbum[2] = "three_opt";
+	dnAlbum[3] = "four_opt";
+	
+	
+	switch(true){
+		case (hrs < 9):
+			this.counter = 0;
+			break;
+		case (hrs < 15):
+			this.counter = 1;
+			break;
+		case (hrs <  20):
+			this.counter = 2;
+			break;
+		case (hrs < 24):
+			this.counter = 3;
+			break;
+		default:
+			break;
+	}
+	
+	var dnImage = 'C:/Users/jimmy/Desktop/My Website/Pictures/dn/' + dnAlbum[counter];
+	dnImage += '.jpg';
+	
+</script>
+
+<p><strong>Reduce the number of clicks</strong></p>
+	<p>Sphere - A round solid figure, or its surface, with every point on its surface equidistant from its center.</p>
+	<p>Bleakness - Exposed and barren and often windswept.</p>
+	<div class="row">
+		<div class="col-xs-9 col-md-6">
+			<strong>Photo is selected at random.</strong>
+			<script language= "JavaScript">	
+				document.write('<img width="400px" src= "' + image + '">');
+			</script>
+		</div>
+		<div class="col-xs-9 col-md-6">
+			<div id="wow" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; text-align: center; max-width: 200px;" >Initializing...</div>
+			<script language= "JavaScript">
+				setInterval(printTime, 1000);
+				document.write('<img id= "dayNight" width="400px" src= "' + dnImage + '">'); 
+			</script>
+		</div>
+	</div>
+ 
+<div id="contactMeButton">
+ <div class="container-fluid" id="contact">
+	<button type= "button" class= "btn btn-info" data-toggle="modal" data-target="#contactMe">Contact me</button>
+</div>
+
+<div class="modal fade" id="contactMe">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!--header-->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h3 class="modal-title">Contact Me</h3>
+			</div>
+			
+			<!--body-->
+			<div class="modal-body">
+				<textarea class="form-control" style="min-width: 100%" rows="5"></textarea>
+			</div>
+			
+			<!--button-->
+			<div class="modal-footer">
+				<button class="btn btn-primary btn-block">Send</button>
+			</div>							
+		</div>
+	</div>
+</div>
+</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	
+</body>
+
+</html>
