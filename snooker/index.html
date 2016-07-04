@@ -25,6 +25,12 @@
 	
 	<link type="text/css" rel="stylesheet" href="https://jimmyzholin.github.io/home.css"/>
 	
+	<style type= "text/css">
+		td{
+			padding: 2px;
+		}
+	</style>
+	
 </head>
 
 <body>
@@ -68,7 +74,7 @@
 		<div class= "col-xs-18 col-md-10">
 			<h1>Snooker</h1>
 			</br>
-			<p>I started playing <a href="https://en.wikipedia.org/wiki/Cue_sports" target="_blank"> cue sports </a> a lot when I was 15. At the time, I had a lot of fun just <em>potting</em> balls (shooting balls into holes), and for the amateur player potting a ball is probably the most satisfying feeling of playing. Potting balls, however, didn't turn cue sports into a passion for me. My passion comes from the strategy and underlying mechanics, which often go unnoticed by beginners.</br> There are a lot of different cue sports but the same mechanics can be applied to every game. So, mechanics are the same but every game has its own rules which require different strategies. The game I'm most passionate about, and talking about, is <b>Snooker</b>.</p>
+			<p>I got into <a href="https://en.wikipedia.org/wiki/Cue_sports" target="_blank"> cue sports </a> when I was about 15. At the time, I had a lot of fun just <em>potting</em> balls (shooting balls into holes), and for the amateur player potting a ball is probably the most satisfying feeling of playing. Potting balls, however, didn't turn cue sports into a passion for me. My passion comes from the strategy and underlying mechanics, which I learned about after playing for hours and hours.</br> There are a lot of different cue sports but the same mechanics can be applied to every game. So, mechanics are the same but every game has its own rules which require different strategies. The game I'm most passionate about is <b>Snooker</b>.</p>
 		</div>
 	</div>
 	
@@ -76,16 +82,61 @@
 		<div class= "col-md-1"></div>
 		<div class= "col-xs-18 col-md-10">
 			<h3>The Mechanics and The Play</h3>
-			<p>Being able to pot balls is important, every beginner should practice just potting balls. After learning to consistently pot balls, the next step (which is a big step) is learning to set up the next shot. This is what separates the professionals from the amateurs. In other words, the next shot can be really tough, like a <span>tight angled shot</span>, or really easy, like a <span>dead-straight shot</span>. Setting up is all about striking the cue ball (the white ball) to give it <b>momentum</b> and <b>rotation</b>.</p>
+			<p>Being able to pot balls is important, but that's only half the game. The other half is all about controlling the rest of the balls. In other words, the player can decide if the next shot is easy or hard. It's all about setting up and to do so a player has to control the <b>momentum</b> and <b>rotation</b> of the cue ball. Momentum is about how hard the cue ball is striked, and rotation is about where/how the cue ball was striked.</p>
+			
 		</div>
 	</div>
+	
+	</br>
+	
+	<script type= "text/javascript">
+		function vidPlay(){
+			var rightHandSide = document.getElementById("rhs");
+			var deadCenter = document.getElementById("dc");
+			var leftHandSide = document.getElementById("lhs");
+			
+			if (rightHandSide.paused){
+				rightHandSide.play();
+				deadCenter.play();
+				leftHandSide.play();
+			}
+		}
+	</script>
+	
 	<div class= "row">
-		<div class= "col-xs-1 col-md-4"></div>
-		<div class= "col-md-4">
-			<iframe src="https://jimmyzholin.github.io/snooker/giphy.gif" width="400" height="270"  frameBorder="1" class="giphy-embed" scrolling= 'no'></iframe>
-			<p style="font-size: 11px">Provided by Eurosport</p> 
+		<div class= "col-xs-18 col-md-12 text-center">
+			<button style= "padding: 10px;" id="play" onclick= "vidPlay()"><span class="glyphicon glyphicon-play"></span></button> 
 		</div>
-		
+	</div>
+	
+	</br>
+	
+	<div class= "row">
+		<div class= "col-xs-16 col-xs-offset-2 col-md-10 col-md-offset-2">
+			<video id= "rhs" width= "300px">
+				<source src= "C:\Users\jimmy\Desktop\jimmyzholin.github.io\snooker\video\rhs.mp4" type= "video/mp4">
+			</video>
+			
+			<video id= "dc" width= "300px">
+				<source src= "C:\Users\jimmy\Desktop\jimmyzholin.github.io\snooker\video\dc.mp4" type= "video/mp4">
+			</video>
+
+			<video id= "lhs" width= "300px">
+				<source src= "C:\Users\jimmy\Desktop\jimmyzholin.github.io\snooker\video\lhs.mp4" type= "video/mp4">
+			</video>
+		</div>
+	</div>
+	
+</br>
+	<div class= "row">
+		<div class= "col-md-4 col-md-offset-1">
+			<p>Besides changing directions from hitting the cushion, a player can come off another ball to set up for the next shot. This is where strategy is important. A player has to plan ahead and execute well in order to have a great game. </br> I've covered some very general concepts of cue sports, and really just talked about the tip of the iceberg. It's one thing to watch and talk about the game, and it's a whole other beast to play. It's frustrating having a bad day of snooker but it's just as fun. </p>
+		</div>
+	
+		<div class= "col-md-3">
+			<iframe src="https://jimmyzholin.github.io/snooker/giphy.gif" width="400" height="270" frameBorder="1" class="giphy-embed" scrolling= 'no'></iframe>
+			<p style="font-size: 11px">Footage Edited and Provided by Eurosport</p> 
+		</div>
 	</div>
 </div>
 

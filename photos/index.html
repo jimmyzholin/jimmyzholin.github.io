@@ -97,7 +97,7 @@
 		
 		var time = hrs + ":" + min + ":" + sec;
 		
-		document.getElementById('wow').innerHTML = "The current time is " + time;
+		document.getElementById('timeBar').innerHTML = "The current time is " + time;
 	}
 	
 	var counter = 0;
@@ -106,8 +106,7 @@
 	dnAlbum[1] = "two_opt";
 	dnAlbum[2] = "three_opt";
 	dnAlbum[3] = "four_opt";
-	
-	
+		
 	switch(true){
 		case (hrs < 9):
 			this.counter = 0;
@@ -134,12 +133,8 @@
 	<div class= "row">
 		<div class= "col-md-2"></div>
 		<div class= "col-md-8">
-			<h2>Two words are selected at random and I try to take photographs that show the two words together.</h2>
 			<h3>Sphere and Bleakness</h3>
 
-			<p><strong>Reduce the number of clicks</strong></p>
-				<p>Sphere - A round solid figure, or its surface, with every point on its surface equidistant from its center.</p>
-				<p>Bleakness - Exposed and barren and often windswept.</p>
 		</div>
 	</div>
 	
@@ -152,7 +147,8 @@
 			</script>
 		</div>
 		<div class="col-xs-9 col-md-4">
-			<div id="wow" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; text-align: center; max-width: 200px;" >Initializing...</div>
+			A time project which changes four times throughout the day.
+			<div id="timeBar" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; text-align: center; max-width: 200px;" >Initializing...</div>
 			<script language= "JavaScript">
 				setInterval(printTime, 1000);
 				document.write('<img id= "dayNight" class= "img-responsive" src= "' + dnImage + '">'); 
