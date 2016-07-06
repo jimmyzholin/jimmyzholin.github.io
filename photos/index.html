@@ -60,7 +60,31 @@
 	</div>
 </nav>
 
-<script language= "JavaScript"> <!--Script: Selects a random photo to be presented on the left side-->
+<script language= "JavaScript"> <!--Script:Slideshow controller-->
+	var shallowArray = new Array("8&9.jpg" , "go.jpg", "strawCakes.jpg");
+	
+	var shallowArray_counter = 0;
+	var shallowArray_length = shallowArray.length - 1;
+	
+	function change_image(num){
+	
+		shallowArray_counter = shallowArray_counter + num;
+		
+		if (shallowArray_counter > shallowArray_length){
+			shallowArray_counter = 0;
+		}
+		
+		if (shallowArray_counter < 0){
+			shallowArray_counter = shallowArray_length;
+		}
+		
+		document.getElementById("slideShow").src = "https://jimmyzholin.github.io/photos/shallow/" + shallowArray[shallowArray_counter];
+		
+		return false;
+	}	
+</script>
+
+<script language= "JavaScript"> <!--Script: Randomly selects a photo from Indoor gallery.-->
 	var randNum = Math.random();
 	var num = 5;
 	var randCreate = Math.round(randNum * (num - 1)) + 1;
@@ -100,10 +124,10 @@
 	
 	var counter = 0;
 	dnAlbum = new Array();
-	dnAlbum[0] = "one_opt";
-	dnAlbum[1] = "two_opt";
-	dnAlbum[2] = "three_opt";
-	dnAlbum[3] = "four_opt";
+	dnAlbum[0] = "one";
+	dnAlbum[1] = "two";
+	dnAlbum[2] = "three";
+	dnAlbum[3] = "four";
 		
 	switch(true){
 		case (hrs < 9):
@@ -135,54 +159,21 @@
 	</div>
 	
 	<div class= "row">
-		<div class= "col-md-4 col-md-offset-2">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			  <!-- Indicators -->
-			  <ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			  </ol>
-
-			  <!-- Wrapper for slides -->
-			  <div class="carousel-inner" role="listbox">
-				
-				<div class="item active">
-				  <img src="https://jimmyzholin.github.io/photos/indoor/deanza.jpg" alt="...">
-				  <div class="carousel-caption">
-					...
-				  </div>
-				</div>
-				
-				<div class="item">
-				  <img src="https://jimmyzholin.github.io/photos/indoor/cj's.jpg" alt="...">
-				  <div class="carousel-caption">
-				  </div>
-				</div>
-				
-				<div class="item">
-				  <img src="https://jimmyzholin.github.io/photos/indoor/mcd.jpg" alt="...">
-				  <div class="carousel-caption">
-				  </div>
-				</div>
-			  </div>
-
-			  <!-- Controls -->
-			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			  </a>
-			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			  </a>
-			</div>
+		<div class= "col-xs-9 col-md-6 col-md-offset-3">
+			<img class= "img-responsive" id="slideShow" src= "https://jimmyzholin.github.io/photos/shallow/8&9.jpg"/>
+			<table>
+				<tr>
+					<td align="left"><a href="" onclick= "return change_image(-1)">Previous</a></td>
+					<td></td>
+					<td align="right"><a href="" onclick= "return change_image(1)">Next</a></td>
+				</tr>
+			</table>
 		</div>
 	</div>
-
+	
 	<div class="row">
-		<div class="col-xs-9 col-md-4 col-md-offset-2">
-			<strong>Photo is selected at random.</strong>
+		<div class="col-xs-9 col-md-6 col-md-offset-3">
+			<strong>Indoor</strong>
 			<script language= "JavaScript">	
 				document.write('<img  class= "img-responsive" src= "' + image + '">');
 			</script>
@@ -191,9 +182,9 @@
 	</br>
 	
 	<div class= "row">
-		<div class="col-xs-9 col-md-4 col-md-offset-2">
-			A time project which changes four times throughout the day.
-			<div id="timeBar" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; text-align: center; max-width: 200px;" >Initializing...</div>
+		<div class="col-xs-9 col-md-6 col-md-offset-3">
+			A time sensitive project which changes four times throughout the day.
+			<div id="timeBar" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; margin: auto; text-align: center; max-width: 200px;" >Initializing...</div>
 			<script language= "JavaScript">
 				setInterval(printTime, 1000);
 				document.write('<img id= "dayNight" class= "img-responsive" src= "' + dnImage + '">'); 
