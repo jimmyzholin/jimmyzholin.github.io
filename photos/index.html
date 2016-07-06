@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 	
-	<title> JL Photos</title>
+	<title>Photos</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -71,7 +71,7 @@
 	images[4] = "sweetHeartFront";
 	images[5] = "deanza";
 	
-	var image = 'https://jimmyzholin.github.io/Pictures/' + images[randCreate];
+	var image = 'https://jimmyzholin.github.io/photos/indoor/' + images[randCreate];
 	
 	image += '.jpg';
 
@@ -122,29 +122,76 @@
 			break;
 	}
 	
-	var dnImage = 'https://jimmyzholin.github.io/Pictures/dn/' + dnAlbum[counter];
+	var dnImage = 'https://jimmyzholin.github.io/photos/dn/' + dnAlbum[counter];
 	dnImage += '.jpg';
 	
 </script>
 
 <div class= "container-fluid">
 	<div class= "row">
-		<div class= "col-md-2"></div>
-		<div class= "col-md-8">
-			<h3>Sphere and Bleakness</h3>
-
+		<div class= "col-md-8 col-md-offset-2">
+			<!--<h3>Sphere and Bleakness</h3>-->
 		</div>
 	</div>
 	
+	<div class= "row">
+		<div class= "col-md-4 col-md-offset-2">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+				
+				<div class="item active">
+				  <img src="https://jimmyzholin.github.io/photos/indoor/deanza.jpg" alt="...">
+				  <div class="carousel-caption">
+					...
+				  </div>
+				</div>
+				
+				<div class="item">
+				  <img src="https://jimmyzholin.github.io/photos/indoor/cj's.jpg" alt="...">
+				  <div class="carousel-caption">
+				  </div>
+				</div>
+				
+				<div class="item">
+				  <img src="https://jimmyzholin.github.io/photos/indoor/mcd.jpg" alt="...">
+				  <div class="carousel-caption">
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			  </a>
+			</div>
+		</div>
+	</div>
+
 	<div class="row">
-		<div class= "col-md-2"></div>
-		<div class="col-xs-9 col-md-4">
+		<div class="col-xs-9 col-md-4 col-md-offset-2">
 			<strong>Photo is selected at random.</strong>
 			<script language= "JavaScript">	
 				document.write('<img  class= "img-responsive" src= "' + image + '">');
 			</script>
 		</div>
-		<div class="col-xs-9 col-md-4">
+	</div>
+	</br>
+	
+	<div class= "row">
+		<div class="col-xs-9 col-md-4 col-md-offset-2">
 			A time project which changes four times throughout the day.
 			<div id="timeBar" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; text-align: center; max-width: 200px;" >Initializing...</div>
 			<script language= "JavaScript">
@@ -153,7 +200,8 @@
 			</script>
 		</div>
 	</div>
-
+</div>
+</br>
 <!--
 <div id="contactMeButton">
 	<div class="container-fluid" id="contact">

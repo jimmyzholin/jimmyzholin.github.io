@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 	
-	<title> JL Snooker</title>
+	<title>Snooker</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -24,12 +24,6 @@
 	<link href="navbar-static-top.css" rel="stylesheet">
 	
 	<link type="text/css" rel="stylesheet" href="https://jimmyzholin.github.io/home.css"/>
-	
-	<style type= "text/css">
-		td{
-			padding: 2px;
-		}
-	</style>
 	
 </head>
 
@@ -93,7 +87,7 @@
 			var deadCenter = document.getElementById("dc");
 			var leftHandSide = document.getElementById("lhs");
 			
-			if (rightHandSide.paused){
+			if (rightHandSide.paused && deadCenter.paused && leftHandSide.paused){
 				rightHandSide.play();
 				deadCenter.play();
 				leftHandSide.play();
@@ -112,7 +106,7 @@
 	<div class= "row">
 		<div class= "col-xs-16 col-xs-offset-2 col-md-10 col-md-offset-2">
 			<video id= "rhs" width= "300px">
-				<source src= "https://jimmyzholin.github.io//snooker/video/right.mp4" type= "video/mp4">
+				<source src= "https://jimmyzholin.github.io/snooker/video/right2.mp4" type= "video/mp4">
 			</video>
 			
 			<video id= "dc" width= "300px">
