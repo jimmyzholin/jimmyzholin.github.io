@@ -50,7 +50,7 @@
 				<li class="dropdown">
 					<a href= "#" class="deopdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span>
 					<ul class="dropdown-menu">
-						<li><a class="active" href="https://jimmyzholin.github.io/spending/">Consumer Spending</a></li>
+						<li><a class="active" href="https://jimmyzholin.github.io/spending/">Spending</a></li>
 					</ul>
 				</li>
 				<li class= "dropdown">
@@ -67,22 +67,136 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<div class= "col-xs-9 col-md-offset-3 col-md-6">
+		<div class= "col-xs-9 col-xs-offset-2 col-md-offset-3 col-md-6">
 			<p>For the past 21 months I've been keeping a detailed log of my expenses. As someone who was finishing their last year of university and entering the work force, I thought it would be fun to start looking at my spending. At first, I was just planning to keep a record, like a general ledger, but I saw some chances to do some data meddling and I found some interesting things about my spending habits.</p>
 			
-			<h4><b>What Got Recorded?</b></h4>
+			<h3 class="text-center"><b>What Got Recorded? Over 600 Somethings.</b></h3>
 			<p>I chose to only record things that I had a choice in buying. For example, I wouldn't record parking tickets. I also didn't record anything that I got for free. This would be a huge factor if I won free pizza for a year because then I wouldn't have to spend as much money on food (a category where I spend 60% to 70% of my money).</p>
 			
-			<h4><b>How Did Things Get Recorded?</b></h4>
-			<p>I broke down my purchases into 5 main categories: Asset, Entertainment, Food, Transportation, and Other. Assets included things like clothes, computer parts, subscriptions, etc. Paying for time at a bowling alley or movie tickets would be put into the Entertainment category. Food includes things bought while eating out and from grocery stores. The cost of gasoline and public transit went into Transportation. The Other category catches anything that didn't fall into the other categories.</p>
-			
-			<img src="https://jimmyzholin.github.io/spending/viz/entryExample.png">
-			
+			<h3 class="text-center"><b>How Did Things Get Recorded? 5 Categories.</b></h3>
+			<p>I broke down my purchases into 5 main categories: Asset, Entertainment, Food, Transportation, and Other. Assets included things like clothes, computer parts, subscriptions, etc. Paying for time at a bowling alley or movie tickets would be put into the Entertainment category. Food includes things bought while eating out and from grocery stores. The cost of gasoline and public transit went into Transportation. The Other category catches anything that didn't fall into the other categories.</p>	
+			</br>
+			<img class="img-responsive center-block" src="https://jimmyzholin.github.io/spending/viz/entryExample.PNG"/><p class="text-center">*A generic example of my records.</p>
+			</br>
+<hr>
 		</div>
-		
 	</div>
-</div>
+	
+	<div class="row">
+		<div class= "col-xs-9 col-xs-offset-1 col-md-offset-3 col-md-6">
+			<h4 class="text-center"><b><u>Part 1: "Pies of the YEAR!"</u></b></h4>
+			<p>Over 21 months, more than 600 purchases were broken down into the following:</p>
+			<img class="img-responsive center-block" style="max-width: 500px;" src="https://jimmyzholin.github.io/spending/viz/pie1.png"/>
+			
+			<p>Though, it's important to mention that during these past 21 months there were two key phases: <u>Student</u> and <u>Working</u>. I began this project, October 2014, as a student and my mentality was to limit my spending to the essentials. This continued until I finished working as a contractor from August 2015 to November 2015. By comparing the two time frames, there was an 8% shift away from Food spending. Some more pies:</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class= "col-xs-9 col-md-offset-2 col-md-9">
+			<img style="float: left; max-width: 450px; margin-right: 0px;" class="img-responsive" src="https://jimmyzholin.github.io/spending/viz/pie2.png"/>
+			<img style="float: left; max-width: 450px; margin-left: 0px;" class="img-responsive" src="https://jimmyzholin.github.io/spending/viz/pie3.png"/>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class= "col-md-offset-3 col-md-6">
+</br>
+			<div class="col-md-offset-1 text-center" style="border: solid 1px black; padding: 3px; display: inline-block;">
+				<h4><em>Conclusion 1</em></h4>
+				<p>With an increase in income, priority shifts away from the bare essentials (Food) to luxuries (Assets and Entertainment).</p>
+			</div>
+</br>
+			<h4 class="text-center"><b><u>Part 2: "Wow, it's hot this MONTH."</u></b></h4>
+			<p>In the heat map we can clearly see the phase shift from being a student (blue box) and working (red box). The following cell values are calculated by taking <b>the amount spent in one month</b> divided by the <b>21-month average</b>. For example, if the amount spent in January 20XX for food was $100 and the 20-month average was $400 then the value in cell [Food, Jan-20XX] would be 0.25 ($100/$400).  A value of 0.25 means that I spent a quarter of what I would averagely spend for a month while a value of 2 means I spent twice as much.</p>
+		</div>	
+	</div>
+	
+	<div class="row">
+		<div class= "col-xs-18 col-md-offset-2 col-md-8">
+			<img id="heatMap" class="img-responsive center-block" style="height: 150px;" src="https://jimmyzholin.github.io/spending/viz/heatMap.png">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+</br>
+			<div class="col-md-offset-1 text-center" style="border: solid 1px black; padding: 3px; display: inline-block;">
+				<h4><em>Conclusion 2</em></h4>
+				<p>An income increase leads to more spending. Here is a graph that helps visualizes this huge, ground-breaking discovery.</p>
+			</div>
+</br>
+			<img class="img-responsive center-block" src="https://jimmyzholin.github.io/spending/viz/notSupply.png">
+			<p class="text-center">*Not to be confused with a supply curve</p>
+		</div>
 
+	</div>
+
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<h3 class="text-center"><b><u>Part 3: "How many DAYS left?"</u></b></h3>
+			<p>The last part showed that with increased income follows increased spending, this part will give an idea of how often money is spent. Here is a scatter plot of my 600+ purchases with each point adjusted to how much it deviates from the standard deviation. For those interested in the formula:</p>
+			<p class="text-center"><b>(the expense - the mean average of all expenses)/standard deviation</b></p>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<img class="img-responsive center-block" src="https://jimmyzholin.github.io/spending/viz/deviations.png">
+			<p>The scatter plot shows that over 95% of my purchases were within 2 standard deviations of the mean with around 92% within 1 standard deviation. In other words, I have a consistent price preference.</p>
+</br>
+			<div class=" col-md-offset-2 text-center" style="border: solid 1px black; padding: 3px; display: inline-block;">
+				<h4><em>Conclusion 3</em></h4>
+				<p>I have a consistent price preference regardless of my income level.</p>
+			</div>
+</br>
+</br>
+			<p>Next, we look at when I spend money. The following graphs show after X amount of days how much I spent relative to the month's total. Example: In October 2014, I spent about 20% of that month's total spending after just 7 days.</p>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<img class="img-responsive" style="max-width: 350px; float: left;" src="https://jimmyzholin.github.io/spending/viz/7days.png"/>
+			<img class="img-responsive" style="max-width: 350px; float: left;" src="https://jimmyzholin.github.io/spending/viz/15daysBold.png"/>
+			<img class="img-responsive" style="max-width: 350px; float: left;" src="https://jimmyzholin.github.io/spending/viz/21daysBold.png"/>
+		</div>
+	</div>
+</br>
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<p>When I first looked at these graphs, I just concluded that I followed a very uniform spending pattern for the last months. A pattern where after a &frac14; of the month I spent &frac14; of that month's total, after &frac12; of the month a &frac12; was spent, and after &frac34; of the month &frac; was spent. However, when I look at each graph from start to finish, I notice a detail which leads to a possible conclusion. 
+
+			The <u>7 Days</u> graph shows that in the beginning I spent on average 20% of a month's total in about seven days. As the months pass, I work my way to averagely spending 25% in seven days. A similar increase occurs with the <u>15 Days</u> graph where 40% increases to nearly 50%. This is not the case with the <u>21 Days</u> graph, where the trend line is fairly consistent at 65% throughout the 21 months.
+</p>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<div class="col-md-offset-1 col-md-10 text-center" style="border: solid 1px black; padding: 3px; display: inline-block;">
+				<h4><em>Conclusion 4</em></h4>
+				<p>An increase in income possibly leads to buying sooner rather than later. Imagine a natural log graph because the beginning has rapid change while the end tampers.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<h3 class="text-center"><b><u>Conclusion Recap & Summary</u></b></h3>
+			<ul>
+				<li>With an increase in income, priority shifts away from the bare essentials to luxuries.</li>
+				<li>An increase in income, leads to more spending.</li>
+				<li>Regardless of income level, there is a consistent price preference.</li>
+				<li>An increase in income possibly leads to the tendancy to buy sooner rather than later.</li>
+			</ul>
+			<p>From the data, I'd say that I'm a typical and casual consumer. Typical in the economic sense because my buying habits are positively correlated with my income level. I'm a casual consumer in the sense that I buy things regularly instead of having high and low purchasing periods. 
+			</br>
+			I plan to continue tracking my expenses and occasionally visualizing the data. It's been fun exploring this and if you have questions send me a message. Thanks for reading.
+			</p>
+		</div>
+	</div>
+	
+</div>
+</br>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">

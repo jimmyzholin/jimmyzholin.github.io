@@ -50,7 +50,7 @@
 				<li class="dropdown">
 					<a href= "#" class="deopdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span>
 					<ul class="dropdown-menu">
-						<li><a href="https://jimmyzholin.github.io/spending/">Consumer Spending</a></li>
+						<li><a href="https://jimmyzholin.github.io/spending/">Spending</a></li>
 					</ul>
 				</li>
 				<li class= "dropdown">
@@ -73,7 +73,7 @@
 	
 	function change_image(num){
 	
-		shallowArray_counter = shallowArray_counter + num;
+		/*shallowArray_counter = shallowArray_counter + num;
 		
 		if (shallowArray_counter > shallowArray_length){
 			shallowArray_counter = 0;
@@ -81,9 +81,9 @@
 		
 		if (shallowArray_counter < 0){
 			shallowArray_counter = shallowArray_length;
-		}
+		}*/
 		
-		document.getElementById("slideShow").src = "https://jimmyzholin.github.io/photos/shallow/" + shallowArray[shallowArray_counter];
+		document.getElementById("slideShow").src = "https://jimmyzholin.github.io/photos/shallow/" + shallowArray[num];
 		
 		return false;
 	}	
@@ -165,20 +165,29 @@
 	
 	<div class= "row">
 		<div class= "col-xs-9 col-md-6 col-md-offset-3">
-			<img class= "img-responsive" id="slideShow" src= "https://jimmyzholin.github.io/photos/shallow/8&9.jpg"/>
-			<table>
-				<tr>
-					<td align="left"><a href="" onclick= "return change_image(-1)">Previous</a></td>
-					<td></td>
-					<td align="right"><a href="" onclick= "return change_image(1)">Next</a></td>
-				</tr>
-			</table>
+			<h3>Macro Shots</h3>
+			<img class= "img-responsive" id="slideShow" style="float: left; right-padding: 0px;" src= "https://jimmyzholin.github.io/photos/shallow/8&9.jpg"/>
+		</div>
+		<div class="col-xs-1 col-md-1">
+			<h3 style="color: white;">MS</h3>
+				<table style="float: left; left-margin: 0px; left-padding: 0px; top-margin: 60px;">
+					<tr>
+						<td align="left"><a href="" onclick= "return change_image(0)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/shallow/8&9.jpg"</a></td>
+					</tr>
+					<tr>
+						<td align="right"><a href="" onclick= "return change_image(1)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/shallow/go.jpg"/></a></td>
+					</tr>
+					<tr>
+						<td align="right"><a href="" onclick= "return change_image(2)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/shallow/strawCakes.jpg"/></a></td>
+					</tr>
+				</table>
+		</div>
 		</div>
 	</div>
 	
 	<div class="row">
 		<div class="col-xs-9 col-md-6 col-md-offset-3">
-			<strong>Indoor</strong>
+			<h3>Random Indoor</h3>
 			<script language= "JavaScript">	
 				document.write('<img  class= "img-responsive" src= "' + image + '">');
 			</script>
@@ -188,7 +197,7 @@
 	
 	<div class= "row">
 		<div class="col-xs-9 col-md-6 col-md-offset-3">
-			A time sensitive project which changes four times throughout the day.
+			<h4 style="display: inline;">A time sensitive project which changes four times throughout the day.</h4>
 			<div id="timeBar" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; margin: auto; text-align: center; max-width: 200px;" >Initializing...</div>
 			<script language= "JavaScript">
 				setInterval(printTime, 1000);
