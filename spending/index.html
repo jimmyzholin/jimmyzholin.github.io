@@ -48,13 +48,13 @@
 			<ul class= "nav navbar-nav">
 				<li><a href= "https://jimmyzholin.github.io/">Home</a></li>
 				<li class="dropdown">
-					<a href= "#" class="deopdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span>
+					<a href= "#" class="deopdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span>
 					<ul class="dropdown-menu">
 						<li><a class="active" href="https://jimmyzholin.github.io/spending/">Spending</a></li>
 					</ul>
 				</li>
 				<li class= "dropdown">
-					<a href= "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interests <span class="caret"></span></a>
+					<a href= "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hobbies<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="https://jimmyzholin.github.io/snooker/">Snooker</a></li>
 					</ul>
@@ -67,7 +67,13 @@
 
 <div class="container-fluid">
 	<div class="row">
+		<div class="col-xs-18 col-md-offset-2 col-md-6">
+			<h1><b>A Small Look Back</b></h1>
+		</div>
+	</div>
+	<div class="row">
 		<div class= "col-xs-9 col-xs-offset-2 col-md-offset-3 col-md-6">
+		<hr>
 			<p>For the past 21 months I've been keeping a detailed log of my expenses. As someone who was finishing their last year of university and entering the work force, I thought it would be fun to start looking at my spending. At first, I was just planning to keep a record, like a general ledger, but I saw some chances to do some data meddling and I found some interesting things about my spending habits.</p>
 			
 			<h3 class="text-center"><b>What Got Recorded? Over 600 Somethings.</b></h3>
@@ -85,16 +91,18 @@
 	<div class="row">
 		<div class= "col-xs-9 col-xs-offset-1 col-md-offset-3 col-md-6">
 			<h4 class="text-center"><b><u>Part 1: "Pies of the YEAR!"</u></b></h4>
-			<p>Over 21 months, more than 600 purchases were broken down into the following:</p>
-			<img class="img-responsive center-block" style="max-width: 500px;" src="https://jimmyzholin.github.io/spending/viz/pie1.png"/>
+			<p>Over 21 months, more than 600 purchases were recorded and they broke down into the following:</p>
+			<img class="img-responsive center-block" src="https://jimmyzholin.github.io/spending/viz/pie1.png"/>
 			
-			<p>Though, it's important to mention that during these past 21 months there were two key phases: <u>Student</u> and <u>Working</u>. I began this project, October 2014, as a student and my mentality was to limit my spending to the essentials. This continued until I finished working as a contractor from August 2015 to November 2015. By comparing the two time frames, there was an 8% shift away from Food spending. Some more pies:</p>
+			<p>Though, it's important to mention that during these past 21 months there were two key phases: <u>Student</u> and <u>Working</u>. I began this project, October 2014, as a student and my mentality was to limit my spending to the essentials. This continued until I finished working as a contractor from August 2015 to November 2015. By comparing the two time frames, there was an 8% shift away from the number of Food purchases. Some more pies:</p>
 		</div>
 	</div>
 	<div class="row">
-		<div class= "col-xs-9 col-md-offset-2 col-md-9">
-			<img style="float: left; max-width: 450px; margin-right: 0px;" class="img-responsive" src="https://jimmyzholin.github.io/spending/viz/pie2.png"/>
-			<img style="float: left; max-width: 450px; margin-left: 0px;" class="img-responsive" src="https://jimmyzholin.github.io/spending/viz/pie3.png"/>
+		<div class= "col-xs-9 col-md-offset-2 col-md-4">
+			<img style="float: left; margin-right: 0px;" class="img-responsive" src="https://jimmyzholin.github.io/spending/viz/pie2.png"/>
+		</div>
+		<div class="col-xs-9 col-md-4">
+			<img style="float: left; margin-left: 0px;" class="img-responsive" src="https://jimmyzholin.github.io/spending/viz/pie3.png"/>
 		</div>
 	</div>
 	
@@ -107,7 +115,9 @@
 			</div>
 </br>
 			<h4 class="text-center"><b><u>Part 2: "Wow, it's hot this MONTH."</u></b></h4>
-			<p>In the heat map we can clearly see the phase shift from being a student (blue box) and working (red box). The following cell values are calculated by taking <b>the amount spent in one month</b> divided by the <b>21-month average</b>. For example, if the amount spent in January 20XX for food was $100 and the 20-month average was $400 then the value in cell [Food, Jan-20XX] would be 0.25 ($100/$400).  A value of 0.25 means that I spent a quarter of what I would averagely spend for a month while a value of 2 means I spent twice as much.</p>
+			<p>In the heat map below the phase shift from being a student (blue box) and working (red box) is clear.</p>
+			<p class="text-center"><em>Equation: Spending during X month/21-month average</em></p>
+			<p>For example, if the amount spent in January 20XX for food was $100 and the 20-month average was $400 then the value in cell [Food, Jan-20XX] would be 0.25 ($100/$400).  A value of 0.25 means that I spent a quarter of what I would averagely spend for a month while a value of 2 means I spent twice as much.</p>
 		</div>	
 	</div>
 	
@@ -121,7 +131,7 @@
 </br>
 			<div class="col-md-offset-1 text-center" style="border: solid 1px black; padding: 3px; display: inline-block;">
 				<h4><em>Conclusion 2</em></h4>
-				<p>An income increase leads to more spending. Here is a graph that helps visualizes this huge, ground-breaking discovery.</p>
+				<p>An income increase leads to more spending. Below is a graph that helps visualizes this <em>huge, ground-breaking</em> discovery.</p>
 			</div>
 </br>
 			<img class="img-responsive center-block" src="https://jimmyzholin.github.io/spending/viz/notSupply.png">
@@ -133,8 +143,8 @@
 	<div class="row">
 		<div class="col-md-offset-3 col-md-6">
 			<h3 class="text-center"><b><u>Part 3: "How many DAYS left?"</u></b></h3>
-			<p>The last part showed that with increased income follows increased spending, this part will give an idea of how often money is spent. Here is a scatter plot of my 600+ purchases with each point adjusted to how much it deviates from the standard deviation. For those interested in the formula:</p>
-			<p class="text-center"><b>(the expense - the mean average of all expenses)/standard deviation</b></p>
+			<p>The last part showed that with increased income follows increased spending, this part will give an idea of how often money is spent. Here is a scatter plot of my 600+ purchases with each point adjusted to how much it deviates from the standard deviation. </p>
+			<p class="text-center"><em>Equation: (the expense - the mean average of all expenses)/standard deviation</em></p>
 		</div>
 	</div>
 	
@@ -189,6 +199,7 @@
 				<li>An increase in income possibly leads to the tendancy to buy sooner rather than later.</li>
 			</ul>
 			<p>From the data, I'd say that I'm a typical and casual consumer. Typical in the economic sense because my buying habits are positively correlated with my income level. I'm a casual consumer in the sense that I buy things regularly instead of having high and low purchasing periods. 
+			</br>
 			</br>
 			I plan to continue tracking my expenses and occasionally visualizing the data. It's been fun exploring this and if you have questions send me a message. Thanks for reading.
 			</p>

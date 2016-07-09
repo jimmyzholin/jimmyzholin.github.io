@@ -48,13 +48,13 @@
 			<ul class= "nav navbar-nav">
 				<li><a href= "https://jimmyzholin.github.io/">Home</a></li>
 				<li class="dropdown">
-					<a href= "#" class="deopdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span>
+					<a href= "#" class="deopdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span>
 					<ul class="dropdown-menu">
 						<li><a href="https://jimmyzholin.github.io/spending/">Spending</a></li>
 					</ul>
 				</li>
 				<li class= "dropdown">
-					<a href= "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interests <span class="caret"></span></a>
+					<a href= "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hobbies<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="https://jimmyzholin.github.io/snooker/">Snooker</a></li>
 					</ul>
@@ -85,25 +85,44 @@
 		
 		document.getElementById("slideShow").src = "https://jimmyzholin.github.io/photos/shallow/" + shallowArray[num];
 		
+		switch(true){
+			case (num == 0):
+				document.getElementById("macro1").style.opacity = 1;
+				document.getElementById("macro2").style.opacity = 0.5;
+				document.getElementById("macro3").style.opacity = 0.5;
+				break;
+			case (num == 1):
+				document.getElementById("macro1").style.opacity = 0.5;
+				document.getElementById("macro2").style.opacity = 1;
+				document.getElementById("macro3").style.opacity = 0.5;
+				break;
+			case (num == 2):
+				document.getElementById("macro1").style.opacity = 0.5;
+				document.getElementById("macro2").style.opacity = 0.5;
+				document.getElementById("macro3").style.opacity = 1;
+				break;
+			default:
+				break;
+		}
+		
 		return false;
 	}	
 </script>
 
 <script language= "JavaScript"> <!--Script: Randomly selects a photo from Indoor gallery.-->
 	var randNum = Math.random();
-	var num = 5;
-	var randCreate = Math.round(randNum * (num - 1)) + 1;
-	images = new Array();
-	images[1] = "mcd";
-	images[2] = "cj's";
-	images[3] = "sweetHeartBack";
-	images[4] = "sweetHeartFront";
-	images[5] = "deanza";
+	var num = 4;
+	var randCreate = Math.round(randNum * (num - 1));
+	images = new Array("deanza", "mcd", "sweetHeartBack", "sweetHeartFront");
 	
 	var image = 'https://jimmyzholin.github.io/photos/indoor/' + images[randCreate];
 	
 	image += '.jpg';
-
+	
+	function change_indoor(num){
+		document.getElementById("randIndoor").src = 'https://jimmyzholin.github.io/photos/indoor/' + images[num] + '.jpg';
+	}
+	
 </script>
 
 <script language= "JavaScript"><!--Script: Displays a certain photo based on the time-->
@@ -170,15 +189,15 @@
 		</div>
 		<div class="col-xs-1 col-md-1">
 			<h3 style="color: white;">MS</h3>
-				<table style="float: left; left-margin: 0px; left-padding: 0px; top-margin: 60px;">
+				<table>
 					<tr>
-						<td align="left"><a href="" onclick= "return change_image(0)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/shallow/8&9.jpg"</a></td>
+						<td align="left"><a href="" onclick= "return change_image(0)"><img id="macro1" style="width: 40px; height: 40px; border-radius: 50%;" src="https://jimmyzholin.github.io/photos/shallow/8&9.jpg"</a></td>
 					</tr>
 					<tr>
-						<td align="right"><a href="" onclick= "return change_image(1)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/shallow/go.jpg"/></a></td>
+						<td align="right"><a href="" onclick= "return change_image(1)"><img id="macro2" style="width: 40px; height: 40px; border-radius: 50%; opacity: 0.5;" src="https://jimmyzholin.github.io/photos/shallow/go.jpg"/></a></td>
 					</tr>
 					<tr>
-						<td align="right"><a href="" onclick= "return change_image(2)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/shallow/strawCakes.jpg"/></a></td>
+						<td align="right"><a href="" onclick= "return change_image(2)"><img id="macro3" style="width: 40px; height: 40px; border-radius: 50%; opacity: 0.5;" src="https://jimmyzholin.github.io/photos/shallow/strawCakes.jpg"/></a></td>
 					</tr>
 				</table>
 		</div>
@@ -188,10 +207,29 @@
 	<div class="row">
 		<div class="col-xs-9 col-md-6 col-md-offset-3">
 			<h3>Random Indoor</h3>
-			<script language= "JavaScript">	
-				document.write('<img  class= "img-responsive" src= "' + image + '">');
+			<img class="img-responsive" id="randIndoor" src="">
+			<script language= "JavaScript">
+				document.getElementById("randIndoor").src = image;
 			</script>
 		</div>
+		
+		<!--<div class="col-md-1">
+			<h3 style="color: white;">RI</h3>
+			<table>
+					<tr>
+						<td align="left"><a href="" onclick= "return change_indoor(0)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/indoor/deanza.jpg"</a></td>
+					</tr>
+					<tr>
+						<td align="right"><a href="" onclick= "return change_indoor(1)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/indoor/mcd.jpg"/></a></td>
+					</tr>
+					<tr>
+						<td align="right"><a href="" onclick= "return change_indoor(2)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/indoor/sweetHeartBack.jpg"/></a></td>
+					</tr>
+					<tr>
+						<td align="right"><a href="" onclick= "return change_indoor(3)"><img style="width: 40px; height: 40px;" src="https://jimmyzholin.github.io/photos/indoor/sweetHeartFront.jpg"/></a></td>
+					</tr>
+				</table>
+		</div>-->
 	</div>
 	</br>
 	
