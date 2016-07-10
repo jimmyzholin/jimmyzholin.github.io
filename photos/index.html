@@ -54,7 +54,7 @@
 			<ul class= "nav navbar-nav">
 				<li><a href= "https://jimmyzholin.github.io/">Home</a></li>
 				<li class="dropdown">
-					<a href= "#" class="deopdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span>
+					<a href= "#" class="deopdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="https://jimmyzholin.github.io/spending/">Spending</a></li>
 					</ul>
@@ -172,24 +172,28 @@
 				document.getElementById("dayNight2").style.opacity = 0.25;
 				document.getElementById("dayNight3").style.opacity = 0.25;
 				document.getElementById("dayNight4").style.opacity = 0.25;
+				document.getElementById("dnText1").style.fontWeight = "bold";
 				break;
 			case (hrs < 15):
 				document.getElementById("dayNight1").style.opacity = 0.25;
 				document.getElementById("dayNight2").style.opacity = 1;
 				document.getElementById("dayNight3").style.opacity = 0.25;
 				document.getElementById("dayNight4").style.opacity = 0.25;
+				document.getElementById("dnText2").style.fontWeight = "bold";
 				break;
 			case (hrs <  20):
 				document.getElementById("dayNight1").style.opacity = 0.25;
 				document.getElementById("dayNight2").style.opacity = 0.25;
 				document.getElementById("dayNight3").style.opacity = 1;
 				document.getElementById("dayNight4").style.opacity = 0.25;
+				document.getElementById("dnText3").style.fontWeight = "bold";
 				break;
 			case (hrs < 24):
 				document.getElementById("dayNight1").style.opacity = 0.25;
 				document.getElementById("dayNight2").style.opacity = 0.25;
 				document.getElementById("dayNight3").style.opacity = 0.25;
 				document.getElementById("dayNight4").style.opacity = 1;
+				document.getElementById("dnText4").style.fontWeight = "bold";
 				break;
 			default:
 				break;
@@ -262,19 +266,19 @@
 				<tr><td colspan="2" ><h4><div id="timeBar" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; margin: auto; text-align: center; max-width: 200px;" >Initializing...</div></h4></td></tr>
 				<tr>
 					<td><img id="dayNight1" style="width: 40px; height: 40px; alight: right;" src="https://jimmyzholin.github.io/photos/dn/one.jpg"/></td>
-					<td>00:00 - 08:59</td>
+					<td id="dnText1">00:00 - 08:59</td>
 				</tr>
 				<tr>
 					<td><img id="dayNight2" style="width: 40px; height: 40px; alight: center;" src="https://jimmyzholin.github.io/photos/dn/two.jpg"/></td>
-					<td>09:00 - 14:59</td>
+					<td id="dnText2">09:00 - 14:59</td>
 				</tr>
 				<tr>
 					<td><img id="dayNight3" style="width: 40px; height: 40px; alight: right;" src="https://jimmyzholin.github.io/photos/dn/three.jpg"/></td>
-					<td>15:00 - 19:59</td>
+					<td id="dnText3">15:00 - 19:59</td>
 				</tr>
 				<tr>
 					<td><img id="dayNight4" style="width: 40px; height: 40px; alight: center;" src="https://jimmyzholin.github.io/photos/dn/four.jpg"/></td>
-					<td>20:00 - 23:59</td>
+					<td id="dnText4">20:00 - 23:59</td>
 				</tr>
 			</table>
 		</div>
