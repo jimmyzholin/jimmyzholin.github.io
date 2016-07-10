@@ -25,6 +25,12 @@
 	
 	<link type="text/css" rel="stylesheet" href="https://jimmyzholin.github.io/home.css"/>
 	
+	<style type="text/css">
+		td{
+			text-align: center;
+		}
+	</style>
+	
 </head>
 
 <body>
@@ -72,16 +78,6 @@
 	var shallowArray_length = shallowArray.length - 1;
 	
 	function change_image(num){
-	
-		/*shallowArray_counter = shallowArray_counter + num;
-		
-		if (shallowArray_counter > shallowArray_length){
-			shallowArray_counter = 0;
-		}
-		
-		if (shallowArray_counter < 0){
-			shallowArray_counter = shallowArray_length;
-		}*/
 		
 		document.getElementById("slideShow").src = "https://jimmyzholin.github.io/photos/shallow/" + shallowArray[num];
 		
@@ -143,16 +139,12 @@
 		
 		var time = hrs + ":" + min + ":" + sec;
 		
-		document.getElementById('timeBar').innerHTML = "The current time is " + time;
+		document.getElementById('timeBar').innerHTML = "Current PST: " + "</br>" + time;
 	}
 	
 	var counter = 0;
-	dnAlbum = new Array();
-	dnAlbum[0] = "one";
-	dnAlbum[1] = "two";
-	dnAlbum[2] = "three";
-	dnAlbum[3] = "four";
-		
+	dnAlbum = new Array("one", "two", "three", "four");
+
 	switch(true){
 		case (hrs < 9):
 			this.counter = 0;
@@ -173,6 +165,37 @@
 	var dnImage = 'https://jimmyzholin.github.io/photos/dn/' + dnAlbum[counter];
 	dnImage += '.jpg';
 	
+	function timeIndicator(){
+		switch(true){
+			case (hrs < 9):
+				document.getElementById("dayNight1").style.opacity = 1;
+				document.getElementById("dayNight2").style.opacity = 0.25;
+				document.getElementById("dayNight3").style.opacity = 0.25;
+				document.getElementById("dayNight4").style.opacity = 0.25;
+				break;
+			case (hrs < 15):
+				document.getElementById("dayNight1").style.opacity = 0.25;
+				document.getElementById("dayNight2").style.opacity = 1;
+				document.getElementById("dayNight3").style.opacity = 0.25;
+				document.getElementById("dayNight4").style.opacity = 0.25;
+				break;
+			case (hrs <  20):
+				document.getElementById("dayNight1").style.opacity = 0.25;
+				document.getElementById("dayNight2").style.opacity = 0.25;
+				document.getElementById("dayNight3").style.opacity = 1;
+				document.getElementById("dayNight4").style.opacity = 0.25;
+				break;
+			case (hrs < 24):
+				document.getElementById("dayNight1").style.opacity = 0.25;
+				document.getElementById("dayNight2").style.opacity = 0.25;
+				document.getElementById("dayNight3").style.opacity = 0.25;
+				document.getElementById("dayNight4").style.opacity = 1;
+				break;
+			default:
+				break;
+		}		
+	}
+	
 </script>
 
 <div class= "container-fluid">
@@ -190,15 +213,9 @@
 		<div class="col-xs-1 col-md-1">
 			<h3 style="color: white;">MS</h3>
 				<table>
-					<tr>
-						<td align="left"><a href="" onclick= "return change_image(0)"><img id="macro1" style="width: 40px; height: 40px; border-radius: 50%;" src="https://jimmyzholin.github.io/photos/shallow/8&9.jpg"</a></td>
-					</tr>
-					<tr>
-						<td align="right"><a href="" onclick= "return change_image(1)"><img id="macro2" style="width: 40px; height: 40px; border-radius: 50%; opacity: 0.5;" src="https://jimmyzholin.github.io/photos/shallow/go.jpg"/></a></td>
-					</tr>
-					<tr>
-						<td align="right"><a href="" onclick= "return change_image(2)"><img id="macro3" style="width: 40px; height: 40px; border-radius: 50%; opacity: 0.5;" src="https://jimmyzholin.github.io/photos/shallow/strawCakes.jpg"/></a></td>
-					</tr>
+					<tr><td align="left"><a href="" onclick= "return change_image(0)"><img id="macro1" style="width: 40px; height: 40px; border-radius: 50%;" src="https://jimmyzholin.github.io/photos/shallow/8&9.jpg"/></a></td></tr>
+					<tr><td align="right"><a href="" onclick= "return change_image(1)"><img id="macro2" style="width: 40px; height: 40px; border-radius: 50%; opacity: 0.5;" src="https://jimmyzholin.github.io/photos/shallow/go.jpg"/></a></td></tr>
+					<tr><td align="right"><a href="" onclick= "return change_image(2)"><img id="macro3" style="width: 40px; height: 40px; border-radius: 50%; opacity: 0.5;" src="https://jimmyzholin.github.io/photos/shallow/strawCakes.jpg"/></a></td></tr>
 				</table>
 		</div>
 		</div>
@@ -235,11 +252,38 @@
 	
 	<div class= "row">
 		<div class="col-xs-9 col-md-6 col-md-offset-3">
-			<h4 style="display: inline;">A time sensitive project which changes four times throughout the day.</h4>
-			<div id="timeBar" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; margin: auto; text-align: center; max-width: 200px;" >Initializing...</div>
+			<h3>A time sensitive display.</h4>
+			<img id= "dayNight" class="img-responsive" src= ""/>
+		</div>
+		
+		<div class="col-md-2">
+		
+			<table style="border: 1px;">
+				<tr><td colspan="2" ><h4><div id="timeBar" style= "color: white; background-color: grey; border-radius: 5px; padding: 2px; margin: auto; text-align: center; max-width: 200px;" >Initializing...</div></h4></td></tr>
+				<tr>
+					<td><img id="dayNight1" style="width: 40px; height: 40px; alight: right;" src="https://jimmyzholin.github.io/photos/dn/one.jpg"/></td>
+					<td>00:00 - 08:59</td>
+				</tr>
+				<tr>
+					<td><img id="dayNight2" style="width: 40px; height: 40px; alight: center;" src="https://jimmyzholin.github.io/photos/dn/two.jpg"/></td>
+					<td>09:00 - 14:59</td>
+				</tr>
+				<tr>
+					<td><img id="dayNight3" style="width: 40px; height: 40px; alight: right;" src="https://jimmyzholin.github.io/photos/dn/three.jpg"/></td>
+					<td>15:00 - 19:59</td>
+				</tr>
+				<tr>
+					<td><img id="dayNight4" style="width: 40px; height: 40px; alight: center;" src="https://jimmyzholin.github.io/photos/dn/four.jpg"/></td>
+					<td>20:00 - 23:59</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="col-md-offset-3 col-md-6">
 			<script language= "JavaScript">
 				setInterval(printTime, 1000);
-				document.write('<img id= "dayNight" class= "img-responsive" src= "' + dnImage + '">'); 
+				document.getElementById("dayNight").src = dnImage;
+				setInterval(timeIndicator, 1000);
 			</script>
 		</div>
 	</div>
